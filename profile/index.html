@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <span class="meText">Me</span>
+      <span class="shopText">Shop.</span>
+      <span class="material-icons bag-icon">local_mall</span>
+    </div>
+
+    <div class="links">
+      <a id="home-link" href="../index.html">Home</a>
+      <a id="profile-link" href="#" title="My profile"><span class="material-icons">account_circle</span></a>
+    </div>
+  </nav>
+
+  <div class="loading">
+    <div class="round"></div>
+  </div>
+
+  <main>
+    <div class="container">
+      <h1>My Profile</h1>
+      <form id="infoForm">
+        <div class="box">
+          <input type="text" id="firstName">
+          <span>First Name</span>
+        </div>
+
+        <div class="box">
+          <input type="text" id="lastName">
+          <span>Last Name</span>
+        </div>
+        <p class="error err-save"></p>
+        <button type="submit" id="saveInfo">Save info <span class="material-icons">info</span></button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h1>Edit Password</h1>
+      <form id="changeForm">
+        <div class="box">
+          <input type="password" id="oldPass">
+          <span>Old Password</span>
+        </div>
+
+        <div class="box">
+          <input type="password" id="newPass">
+          <span>New Password</span>
+        </div>
+
+        <div class="box">
+          <input type="password" id="confirmPass">
+          <span>Confirm Password</span>
+        </div>
+        <p class="error err-change"></p>
+        <button type="submit" id="changePass">Change Password <span class="material-icons">lock</span></button>
+      </form>
+    </div>
+    <button id="logout">Logout <span class="material-icons">logout</span></button>
+  </main>
+
+  <script src="./script.js"></script>
+  <script type="text/javascript">
+    function preventBack() {
+      window.history.forward();
+    }
+
+    setTimeout("preventBack()", 0);
+
+    window.onunload = function () { null };
+  </script>
+</body>
+
+</html>

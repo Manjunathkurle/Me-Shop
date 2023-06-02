@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    width: 100%;
+    padding: 10px 24px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 0;
+    transition: 0.5s ease-out;
+  }
+  
+  .logo .meText {
+    font-family: "Bruno Ace SC", cursive;
+    font-size: 1.8rem;
+  }
+  
+  .logo .shopText {
+    font-family: "Bruno Ace SC", cursive;
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .logo .bag-icon {
+    position: absolute;
+    top: 12px;
+    left: 110px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .logo:hover .shopText {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(28px);
+    opacity: 0;
+  }
+  .logo:hover .bag-icon {
+    transform: translateX(-45px);
+    left: 110px;
+    opacity: 1;
+  }
+  
+  .links {
+    width: 34%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  
+  .links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .links #home-link::before, .links #cart-link::before {
+    content: "";
+    height: 2px;
+    width: 110%;
+    transform: scaleX(0);
+    background-color: white;
+    border: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: -1px;
+    transform-origin: bottom left;
+    transition: 0.4s ease-out;
+  }
+  
+  .links #home-link:hover::before, .links #cart-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+  }
+  
+  .links a:hover {
+    transform: translateY(-5px);
+  }
+  
+  #profile-link span{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.9rem;
+    align-self: baseline;
+    bottom: -4px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .links button {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: 0.2s ease-out;
+  }
+  
+  #login-link {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  #login-link:hover {
+    background-color: rgb(69, 204, 69);
+    border: 2px solid rgb(69, 204, 69);
+  }
+  #signup-link {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  #signup-link:hover {
+    background-color: rgb(59, 130, 196);
+    border: 2px solid rgb(59, 130, 196);
+  }
+  
+  h1 {
+    margin: 35px auto;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+  }
+  
+  .itemContainer {
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    overflow: hidden;
+    padding: 22px 14px;
+  }
+  
+  .itemContainer .item {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid black;
+    box-shadow: 0 0 8px black;
+    width: 30%;
+    transition: 0.4s ease-out;
+    overflow: hidden;
+  }
+  
+  .itemContainer .item:hover {
+    transform: scale(1.05);
+  }
+  
+  .itemContainer .item .holder {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    align-self: center;
+    padding: 8px 18px;
+    text-align: center;
+  }
+  
+  .itemContainer .item .holder img {
+    width: 94%;
+  }
+  
+  .itemContainer .item .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .itemContainer .item .info {
+    padding: 1rem;
+  }
+  
+  .itemContainer .item .info .head {
+    margin-bottom: 12px;
+  }
+  
+  .itemContainer .item button {
+    width: 75%;
+    align-self: flex-end;
+    border-radius: none;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+  }
+  
+  .itemContainer .item button:hover {
+    width: 100%;
+  }
+  
+  .checkoutList {
+    width: 22.5%;
+    height: 82.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(34, 34, 34);
+    align-items: center;
+    color: white;
+    padding: 18px 10px 25px 10px;
+    position: fixed;
+    right: 10px;
+    top: 98px;
+    box-shadow: 0 0 8px black;
+  }
+  
+  .total {
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .total .text {
+    font-weight: bold;
+  }
+  
+  .list {
+      width: 100%;
+    padding: 8px ;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: center;
+  }
+  
+  #checkoutBtn{
+      border: none;
+      background-color: white;
+      padding: 20px 14px;
+      width: 68%;
+      cursor: pointer;
+      position: relative;
+      transition: 0.4s ease-in-out;
+  }
+  
+  #checkoutBtn .btnTxt{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.3s ease-in-out;
+  }
+  
+  #checkoutBtn .cart-icn{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      font-size: 2rem;
+      transition: 0.3s ease-in-out;
+  }
+  
+  #checkoutBtn:hover .btnTxt{
+      transform: translateX(50px);
+      opacity: 0;
+  }
+  
+  #checkoutBtn:hover .cart-icn{
+      transform: translateX(82px);
+      opacity: 1;
+  }
+  
+  .priceList{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+  }
+  
+  .loading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.928);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading .round {
+    width: 85px;
+    height: 85px;
+    border: solid 10px #000000;
+    border-radius: 50%;
+    border-right-color: rgba(0, 0, 0, 0.13);
+    border-bottom-color: rgba(0, 0, 0, 0.13);
+    animation: spin 1.5s ease-in-out infinite alternate-reverse;
+    transition: all 0.5s ease-in;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0) scale(0.8);
+    }
+    to {
+      transform: rotate(360deg) scale(1.1);
+    }
+  }

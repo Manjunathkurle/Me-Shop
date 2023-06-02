@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeShop.</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <span class="meText">Me</span>
+      <span class="shopText">Shop.</span>
+      <span class="material-icons bag-icon">local_mall</span>
+    </div>
+
+    <div class="links">
+      <a id="home-link" href="./index.html">Home</a>
+      <a id="cart-link" href="#">Cart</a>
+      <button id="login-link">Login</button>
+      <button id="signup-link">Signup</button>
+    </div>
+  </nav>
+
+  <div class="loading" style="height: 122.5vh">
+    <div class="round"></div>
+  </div>
+
+  <div class="container">
+    <form id="signupForm">
+      <h1>Signup</h1>
+
+      <div class="box">
+        <input type="text" name="username" id="fname" required>
+        <span>First Name</span>
+      </div>
+
+      <div class="box">
+        <input type="text" name="username" id="lname" required>
+        <span>Last Name</span>
+      </div>
+
+      <div class="box">
+        <input type="text" name="username" id="username" required>
+        <span>Username</span>
+      </div>
+      
+      <div class="box">
+        <input type="text" name="mail" id="mail" required>
+        <span>Email</span>
+      </div>
+
+      <div class="box">
+        <input type="password" id="pass" required>
+        <span>Password</span>
+      </div>
+  
+      <div class="box">
+        <input type="password" id="confirmpass" required>
+        <span>Confirm Password</span>
+      </div>
+      
+      <button type="submit" id="signup">Signup</button>
+
+      <p class="error"></p>
+    </form>
+  </div>
+
+  <script src="./signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    margin: 38px 20px;
+    height: 80vh;
+    width: 60%;
+    background-image: url('../landingPagePic.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#rzp-button1{
+    width: 150px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid gold;
+    color: gold;
+    cursor: pointer;
+}
+
+#rzp-button1:hover{
+    box-shadow: 0 0 6px gold;
+    background-color: gold;
+    color: white;
+}
+
+.item{
+    width: 32%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bill{
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 1.1rem;
+    line-height: 30px;
+    background-color: rgb(41, 40, 40);
+    color: white;
+}
+
+.success{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px
+}
+
+.success span{
+    font-size: 4rem;
+    color: rgb(2, 196, 2);
+}
+
+.success p {
+    font-size: 4rem;
+    color: rgb(2, 196, 2);
+}
+
+.error{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px
+}
+
+.error span{
+    font-size: 4rem;
+    color: rgb(255, 42, 42);
+}
+
+.error p {
+    font-size: 4rem;
+    color: rgb(255, 42, 42);
+}
+
+.address{
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;justify-content: space-around;
+    gap: 10px;
+}
+
+.address input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px 8px;
+    transition: 0.3s ease-out;
+}
+
+.address input:focus{
+    outline: none;
+    border-radius: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+.address div{
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 14px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payments</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="image">
+
+    </div>
+    <div class="item">
+      <div class="address">
+        <h3>Address:</h3>
+        <input type="text" name="" id="name" placeholder="Full Name *">
+        <input type="number" name="" id="phon" placeholder="Phone Number *">
+        <div>
+          <input type="text" name="" id="state" placeholder="State *">
+          <input type="text" name="" id="city" placeholder="City *">
+          <input type="number" name="" id="pin" placeholder="Pincode *">
+        </div>
+        <input type="text" name="" id="house" placeholder="Building Name *">
+        <input type="text" name="" id="mark" placeholder="Landmark *">
+      </div>
+      <div class="bill">
+        No bill found
+      </div>
+      <button id="rzp-button1">Pay <span class="material-icons">monetization_on</span></button>
+    </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
